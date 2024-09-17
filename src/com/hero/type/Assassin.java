@@ -1,32 +1,19 @@
 package com.hero.type;
 
 import com.hero.Hero;
+import com.hero.skill.iAttackSkill;
 
-public class Assassin extends Hero implements Type {
+public class Assassin extends Hero {
 
     private double baseHp = 1000;
     private double baseAttack = 150;
     private double baseArmor = 100;
     private double baseMana = 100;
 
+    private iAttackSkill attackSkill;
+
     public Assassin(String name) {
         super(name);
-    }
-
-    public void attack(Hero enemy) {
-        System.out.println(super.getName() + " has been attack " + enemy.getName() + " with damage " + this.baseAttack);
-    }
-
-    public void skill1() {
-    }
-
-    public void skill2() {
-    }
-
-    public void skill3() {
-    }
-
-    public void skill4() {
     }
 
     public double getBaseHp() {

@@ -1,28 +1,19 @@
 package com.hero.type;
 
 import com.hero.Hero;
+import com.hero.skill.iAttackSkill;
 
-public class Fighter extends Hero implements Type {
+public class Fighter extends Hero {
 
     private double baseHp = 1500;
     private double baseAttack = 120;
     private double baseArmor = 100;
     private double baseMana = 100;
 
+    private iAttackSkill attackSkill;
+
     public Fighter(String name) {
         super(name);
-    }
-
-    public void skill1() {
-    }
-
-    public void skill2() {
-    }
-
-    public void skill3() {
-    }
-
-    public void skill4() {
     }
 
     public double getBaseHp() {
@@ -55,12 +46,6 @@ public class Fighter extends Hero implements Type {
 
     public void setBaseMana(double baseMana) {
         this.baseMana += baseMana;
-    }
-
-    public void attack() {
-    }
-
-    public void defend() {
     }
 
 }

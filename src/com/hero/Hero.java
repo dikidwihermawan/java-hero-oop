@@ -1,23 +1,31 @@
 package com.hero;
 
+import com.hero.skill.iAttackSkill;
+
 public abstract class Hero {
 
     private String name;
+    private iAttackSkill attackSkill;
 
-    public String getName() {
-        return name;
-    }
-
-    public Hero(String name) {
+    public Hero(String name){
         this.name = name;
     }
 
-    public void attack(Hero enemy) {
-        System.out.println(this.name + " was attacked " + enemy.name);
+    public String getName(){
+        return this.name;
     }
 
-    public void display() {
-        System.out.println("Hero :\t" + this.name);
+    public void setAttackSkill(iAttackSkill attackSkill){
+        this.attackSkill = attackSkill;
     }
 
+    public void attack(Hero enemy){
+        System.out.println(this.name + " is attacking");
+        this.attackSkill.attack(enemy);
+    }
+
+    public void display(){
+        System.out.println("Name: " + this.name);
+    }
+    
 }
